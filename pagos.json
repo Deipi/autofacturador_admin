@@ -1,0 +1,114 @@
+{
+  "pagos": [
+    {
+      "code": "151833|6KFG266",
+      "state": "U",
+      "payment_date": "2016-08-01",
+      "sub_total": "12.06",
+      "transferred_taxes": "1.94",
+      "total": "14",
+      "retained_taxes": "0",
+      "id": 1
+    },
+    {
+      "code": "151833|6KFG266",
+      "state": "U",
+      "payment_date": "2016-08-01",
+      "sub_total": "15",
+      "transferred_taxes": "0",
+      "retained_taxes": "0",
+      "total": "15",
+      "id": 2
+    },
+    {
+      "code": "151833|6KFG266",
+      "state": "U",
+      "payment_date": "2016-08-01",
+      "sub_total": "25",
+      "transferred_taxes": "0",
+      "retained_taxes": "0",
+      "total": "25",
+      "id": 3
+    },
+    {
+      "code": "151833|6KFG266",
+      "state": "U",
+      "payment_date": "2016-08-01",
+      "total": "36",
+      "transferred_taxes": "0",
+      "retained_taxes": "0",
+      "sub_total": "36",
+      "id": 4
+    },
+    {
+      "code": "151834|6KFG267",
+      "state": "U",
+      "payment_date": "2016-08-01",
+      "total": "14",
+      "transferred_taxes": "0",
+      "retained_taxes": "0",
+      "sub_total": "14",
+      "id": 5
+    },
+    {
+      "code": "151834|6KFG267",
+      "state": "U",
+      "payment_date": "2016-08-01",
+      "total": "15",
+      "transferred_taxes": "0",
+      "retained_taxes": "0",
+      "sub_total": "15",
+      "id": 6
+    },
+    {
+      "code": "151835|6KFG268",
+      "state": "U",
+      "payment_date": "2016-08-01",
+      "total": "14",
+      "transferred_taxes": "0",
+      "retained_taxes": "0",
+      "sub_total": "14",
+      "id": 7
+    },
+    {
+      "code": "151835|6KFG268",
+      "state": "U",
+      "payment_date": "2016-08-01",
+      "total": "15",
+      "transferred_taxes": "0",
+      "retained_taxes": "0",
+      "sub_total": "15",
+      "id": 8
+    },
+    {
+      "code": "151835|6KFG268",
+      "state": "U",
+      "payment_date": "2016-08-01",
+      "total": "25",
+      "transferred_taxes": "0",
+      "retained_taxes": "0",
+      "sub_total": "25",
+      "id": 9
+    },
+    {
+      "code": "134435|6hFG268",
+      "state": "I",
+      "payment_date": "2016-08-01",
+      "total": "25",
+      "transferred_taxes": "0",
+      "retained_taxes": "0",
+      "sub_total": "25",
+      "id": 10
+    },
+    {
+      "code": "121835|6KkG268",
+      "state": "I",
+      "payment_date": "2016-08-01",
+      "total": "25",
+      "transferred_taxes": "0",
+      "retained_taxes": "0",
+      "sub_total": "25",
+      "id": 11
+    }
+  ]
+}
