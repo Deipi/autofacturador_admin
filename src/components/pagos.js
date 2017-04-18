@@ -11,13 +11,20 @@ const NewLayout = ({ Table,Filter,Pagination }) => (
 );
 
 export class Filter extends Component {
+	constructor(props){
+    super(props);
+    this.onChange = this.onChange.bind(this);
+  }
+  onChange(e) {
+    this.props.setFilter(e.target.value);
+  }
   render() {
    return (
-      <select id="category"onChange={this.handleChange}>
-        <option value="default">--Todos--</option>
-        <option value="Pago">Pago</option>
-        <option value="Facturado">Facturadas</option>
-        <option value="Cancelada">Canceladas</option>
+      <select onChange={this.onChange}>
+        <option value="">--Todos--</option>
+        <option value="U">Pago</option>
+        <option value="I">Facturadas</option>
+        <option value="E">Canceladas</option>
       </select>
     );
   }
@@ -26,7 +33,8 @@ export class Filter extends Component {
 
 const stateMap = {
 	"U": ["Pago", "default"],
-	"I": ["Facturado", "success"]
+	"I": ["Facturado", "success"],
+	"E": ["Cancelada", "danger"]
 }
 
 const CustomColumn = ({value}) => <i className="fa fa-list"/>;
@@ -42,16 +50,18 @@ export class Pagos extends Component {
 				plugins={[plugins.LocalPlugin]}
 				styleConfig={{classNames:
 				 { Table: 'table table-striped',} }}
-				 components={{ Layout: NewLayout, Filter }}>
+				 components={{
+				 	Filter: Filter,
+				 	Layout: NewLayout }}>
 				<RowDefinition>
-		   	  		<ColumnDefinition id="code" visible />
-			      	<ColumnDefinition id="state" visible customComponent={CustomColumn1}/>
-		      		<ColumnDefinition id="payment_date" visible/>
-		      		<ColumnDefinition id="sub_total" visible/>
-		      		<ColumnDefinition id="transferred_taxes" visible/>
-		      		<ColumnDefinition id="retained_taxes" visible/>
-		      		<ColumnDefinition id="total" visible/>
-		      		<ColumnDefinition id="options"  visible  customComponent={CustomColumn}/>
+		   	  		<ColumnDefinition id="code" title="Codigo"visible />
+			      	<ColumnDefinition id="state" title="Estado" visible customComponent={CustomColumn1}/>
+		      		<ColumnDefinition id="payment_date" title="Fecha de Pago"visible/>
+		      		<ColumnDefinition id="sub_total" title="Sub Total"visible/>
+		      		<ColumnDefinition id="transferred_taxes" title="Impuestos Transferidos"visible/>
+		      		<ColumnDefinition id="retained_taxes" title="Impuestos retenidos"visible/>
+		      		<ColumnDefinition id="total"title="Total" visible/>
+		      		<ColumnDefinition id="options"  title="Opciones"visible  customComponent={CustomColumn}/>
 		 		</RowDefinition>
 			</Griddle>
 		);
