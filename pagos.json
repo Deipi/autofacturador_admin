@@ -113,12 +113,23 @@
     {
       "code": "141552|6KvG268",
       "state": "E",
-      "payment_date": "2016-08-01",
+      "payment_date": "2017-09-02",
       "total": "55",
       "transferred_taxes": "0",
       "retained_taxes": "12",
       "sub_total": "25",
       "id": 12
+    },
+    {
+      "code": "111552|6KvG262",
+      "state": "I",
+      "payment_date": "2017-08-02",
+      "total": "55",
+      "transferred_taxes": "0",
+      "retained_taxes": "12",
+      "sub_total": "25",
+      "id": 13
     }
+
   ]
 }
