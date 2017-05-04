@@ -4,7 +4,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 
 
-export class Filterfecha extends Component {
+export class FilterFecha extends Component {
 	render() {
 		const { start,end,onChangef ,change1 ,change  }=this.props;
 
@@ -38,5 +38,4 @@ export class Filterfecha extends Component {
 	  }
 	}
 
-
-export default  connect()(Filterfecha);
+export default FilterFecha;

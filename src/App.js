@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import Pagos from '../src/containers/pagos'
+import PagosContainer from '../src/containers/PagosContainer'
 import 'bootstrap/dist/css/bootstrap.css';
 
 class App extends Component {
   render() {
     return (
     	<div>
-    <Pagos/>
+    <PagosContainer/>
     </div>
     );
   }

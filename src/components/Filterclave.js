@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 
-export class Filterclave extends Component {
+export class FilterClave extends Component {
 	render() {
 		const { onClick,onChange }=this.props;
 		return (
@@ -14,4 +14,4 @@ export class Filterclave extends Component {
 	 }
 }
 
-export default connect()(Filterclave);
+export default FilterClave;

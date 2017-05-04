@@ -1,17 +1,21 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchPagos,fetchPagosFilterc} from '../actions/pagos';
-import FilterPagos from '../components/FilterPagos'
-import Filterfecha from '../components/Filterfecha'
-import Filterclave from '../components/Filterclave'
-import Pagos1  from '../components/pagos';
+
 import moment from 'moment';
+
+import fetchPagosFilter from '../actions/filters';
+import fetchPagos from '../actions/receipt';
+import FilterPagos from '../components/FilterPagos'
+import FilterFecha from '../components/FilterFecha'
+import FilterClave from '../components/FilterClave'
+import PagosTable  from '../components/PagosTable';
+
 
 
 const selector = state => ({
 	pagos: state.get('pagos'),
 })
-class Pagos extends Component {
+class PagosContainer extends Component {
 	constructor(props) {
 		super(props);
 		this.onClickFilter=this.onClickFilter.bind(this);
@@ -32,7 +36,7 @@ class Pagos extends Component {
 	}
 	onClickFilter(){
 		const { props: { dispatch }, state: { filter } } = this;
-			dispatch(fetchPagosFilterc(filter));
+			dispatch(fetchPagosFilter(filter));
 	}
 	handleChange = ({ startDate, endDate }) => {
 		startDate = startDate || this.state.startDate
@@ -62,13 +66,13 @@ class Pagos extends Component {
 		const { props: { pagos } } = this;
 		return (
 			<div>
-				<Filterclave onChange={this.onChange} onClick={this.onClickFilter} />
+				<FilterClave onChange={this.onChange} onClick={this.onClickFilter} />
 				<FilterPagos onChangee={this.onChange} />
-				<Filterfecha onChangef={this.onChange} handleRow={this.handleChangeRaw} start={this.state.startDate}  change={this.handleChangeStart} end={this.state.endDate} change1={this.handleChangeEnd} />
-				<Pagos1 pagos={ pagos }/>
+				<FilterFecha onChangef={this.onChange} handleRow={this.handleChangeRaw} start={this.state.startDate}  change={this.handleChangeStart} end={this.state.endDate} change1={this.handleChangeEnd} />
+				<PagosTable pagos={ pagos }/>
 			</div>
 		);
 	}
 }
 
-export default connect(selector)(Pagos);
+export default connect(selector)(PagosContainer);

@@ -20,7 +20,7 @@ const CustomColumn  =({value}) =><button type="button"><i className="fa fa-list"
 
 const CustomColumn1 = ({value}) => <Badge color={stateMap[value][1]}>{ stateMap[value][0] }</Badge>;
 
-export class Pagos1 extends Component {
+export class PagosTable extends Component {
 	render() {
 		const { props: { pagos } } = this;
 		return (
@@ -45,4 +45,4 @@ export class Pagos1 extends Component {
 	}
 }
 
-export default Pagos1
+export default PagosTable;

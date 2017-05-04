@@ -19,5 +19,4 @@ export class FilterPagos extends Component {
 	 }
 }
 
-
-export default connect()(FilterPagos);
+export default FilterPagos;

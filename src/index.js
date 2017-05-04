@@ -9,7 +9,7 @@ import thunk from 'redux-thunk';
 import immutable from 'immutable';
 
 import { reducer as formReducer } from 'redux-form/immutable'
-import pagosReducers from './reducers/pagos';
+import pagosReducers from './reducers/receipt';
 
 import { combineReducers } from 'redux-immutablejs';
 
