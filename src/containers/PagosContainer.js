@@ -10,6 +10,8 @@ import FilterFecha from '../components/FilterFecha'
 import FilterClave from '../components/FilterClave'
 import PagosTable  from '../components/PagosTable';
 
+import FilterContainer from './FilterContainer';
+
 
 
 const selector = state => ({
@@ -66,9 +68,7 @@ class PagosContainer extends Component {
 		const { props: { pagos } } = this;
 		return (
 			<div>
-				<FilterClave onChange={this.onChange} onClick={this.onClickFilter} />
-				<FilterPagos onChangee={this.onChange} />
-				<FilterFecha onChangef={this.onChange} handleRow={this.handleChangeRaw} start={this.state.startDate}  change={this.handleChangeStart} end={this.state.endDate} change1={this.handleChangeEnd} />
+				<FilterContainer />
 				<PagosTable pagos={ pagos }/>
 			</div>
 		);

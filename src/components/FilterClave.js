@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+
 
 export class FilterClave extends Component {
 	render() {
-		const { onClick,onChange }=this.props;
 		return (
-			<div>
-				<input type="text" placeholder="Filtra Clave" name='code' onChange={ onChange } />
-				<button onClick={ onClick }>Filter</button>
-			</div>
+			<FormGroup>
+				<Input type="text" name="code"  placeholder="Buscar..." onChange={ this.props.onTextUpdate } />
+			</FormGroup>
 		);
 	 }
 }
