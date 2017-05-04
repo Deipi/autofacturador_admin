@@ -8,7 +8,6 @@ import Pagos1  from '../components/pagos';
 import moment from 'moment';
 
 
-
 const selector = state => ({
 	pagos: state.get('pagos'),
 })
@@ -18,14 +17,14 @@ class Pagos extends Component {
 		this.onClickFilter=this.onClickFilter.bind(this);
 		this.onChange = this.onChange.bind(this);
 		this.state = {
-	      filter: {}
-    	}
+		  filter: {}
+		}
 	}
 	onChange(event) {
 		const { state: { filter} } = this;
-	    const { target: { value, name, } } = event;
-	    filter[name] = value
-	    this.setState({filter});
+		const { target: { value, name, } } = event;
+		filter[name] = value
+		this.setState({filter});
 	 }
 	componentWillMount() {
 		const { props: { dispatch } } = this;
@@ -36,26 +35,26 @@ class Pagos extends Component {
 			dispatch(fetchPagosFilterc(filter));
 	}
 	handleChange = ({ startDate, endDate }) => {
-	    startDate = startDate || this.state.startDate
-	    endDate = endDate || this.state.endDate
+		startDate = startDate || this.state.startDate
+		endDate = endDate || this.state.endDate
 
-	    if (startDate.isAfter(endDate)) {
-	      var temp = startDate
-	      startDate = endDate
-	      endDate = temp
-	    }
+		if (startDate.isAfter(endDate)) {
+		  var temp = startDate
+		  startDate = endDate
+		  endDate = temp
+		}
 
 	   this.setState({ startDate, endDate })
-  	}
+	}
 
 	handleChangeStart = (startDate) => this.handleChange({ startDate })
 
 	handleChangeEnd = (endDate) => this.handleChange({ endDate })
 
 	handleChangeRaw(value) {
-	  	if(value === "tomorrow") {
-		    const tomorrow = moment().add(1, "day")
-		    this.handleChange(tomorrow)
+		if(value === "tomorrow") {
+			const tomorrow = moment().add(1, "day")
+			this.handleChange(tomorrow)
 		}
 	}
 
@@ -71,4 +70,5 @@ class Pagos extends Component {
 		);
 	}
 }
+
 export default connect(selector)(Pagos);

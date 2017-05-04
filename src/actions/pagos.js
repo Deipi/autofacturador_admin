@@ -23,4 +23,3 @@ export const fetchPagosFilterc = (filter) => (dispatch, getStore) => fetch(`http
 	payload: pagos
 
 })));
-
