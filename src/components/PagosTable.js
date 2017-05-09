@@ -41,7 +41,7 @@ const OptionsComponent = ({ value, griddleKey, rowData }) => {
 		);
 	} else if(rowData.state === "I"){
 		return(
-			<Link to="/DetalleFactura"><button type="button"><i className="fa fa-list" />  <i className="fa fa-info-circle" /></button></Link>
+			<Link to={`/receipts/${rowData.code}`}><button type="button"><i className="fa fa-list" />  <i className="fa fa-info-circle" /></button></Link>
 		);
 	} else {
 		return(

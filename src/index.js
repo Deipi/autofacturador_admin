@@ -42,7 +42,7 @@ const routes = [
     sidebar: () => <div>shoelaces!</div>,
     main: () => <AutoFacturador/>
   },
-  { path: '/DetalleFactura',
+  { path: '/receipts',
     sidebar: () => <div>shoelaces!</div>,
     main: () => <DetalleFactura/>
   }
