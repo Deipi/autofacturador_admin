@@ -34,38 +34,38 @@ const store = createStore(rootReducer,initialState, applyMiddleware(thunk));
 const routes = [
 
   { path: '/',
-    exact: true,
-    sidebar: () => <div>home!</div>,
-    main: () =>  <PagosContainer/>
+	exact: true,
+	sidebar: () => <div>home!</div>,
+	main: () =>  <PagosContainer/>
   },
   { path: '/AutoFacturador',
-    sidebar: () => <div>shoelaces!</div>,
-    main: () => <AutoFacturador/>
+	sidebar: () => <div>shoelaces!</div>,
+	main: () => <AutoFacturador/>
   },
-  { path: '/receipts',
-    sidebar: () => <div>shoelaces!</div>,
-    main: () => <DetalleFactura/>
+  { path: '/receipts/:code',
+	sidebar: () => <div>detalle!</div>,
+	main:DetalleFactura,
   }
 ]
 
 ReactDOM.render(
-    <Provider store={ store }>
-        <Router>
-            <App>
-              <div style={{ display: 'flex' }}>
-                  <div id="Contenido" >
-                    {routes.map((route, index) => (
-                      <Route
-                        key={index}
-                        path={route.path}
-                        exact={route.exact}
-                        component={route.main}
-                      />
-                    ))}
-                  </div>
-                </div>
-            </App>
-        </Router>
-    </Provider>,
+	<Provider store={ store }>
+		<Router>
+			<App>
+			  <div style={{ display: 'flex' }}>
+				  <div id="Contenido" >
+					{routes.map((route, index) => (
+					  <Route
+						key={index}
+						path={route.path}
+						exact={route.exact}
+						component={route.main}
+					  />
+					))}
+				  </div>
+				</div>
+			</App>
+		</Router>
+	</Provider>,
   document.getElementById('root')
 );

@@ -80,6 +80,10 @@
       "transferred_taxes": "0",
       "retained_taxes": "0",
       "sub_total": "15",
+      "concepto":[
+        "salchicas",
+        "pizza"
+      ],
       "id": 6
     },
     {
@@ -90,6 +94,11 @@
       "transferred_taxes": "0",
       "retained_taxes": "0",
       "sub_total": "14",
+      "concepto":[
+        "pescado",
+        "refresco",
+        "agua"
+      ],
       "id": 7
     },
     {
@@ -100,6 +109,10 @@
       "transferred_taxes": "0",
       "retained_taxes": "0",
       "sub_total": "15",
+      "concepto":[
+        "Torta jamon",
+        "agua limon"
+      ],
       "id": 8
     },
     {
@@ -110,6 +123,10 @@
       "transferred_taxes": "0",
       "retained_taxes": "0",
       "sub_total": "25",
+      "concepto":[
+        "pechuga de pollo",
+        "agua frsca"
+      ],
       "id": 9
     },
     {
@@ -120,6 +137,11 @@
       "transferred_taxes": "0",
       "retained_taxes": "0",
       "sub_total": "25",
+      "concepto":[
+        "menudo",
+        "refresco",
+        "doritos"
+      ],
       "id": 10
     },
     {
