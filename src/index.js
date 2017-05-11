@@ -20,7 +20,7 @@ import AutoFacturador from '../src/components/AutoFacturador'
 import DetalleFactura from '../src/components/DetalleFactura'
 
 import { combineReducers } from 'redux-immutablejs';
-
+import  './autoinvoice.css';
 
 const initialState = immutable.Map();
 

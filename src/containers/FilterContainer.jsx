@@ -71,46 +71,42 @@ class FilterContainer extends Component {
 
 	render() {
 		return (
-			<Col className="col-md-12 offset-1" >
-			<div>
+			<Row>
+				<Col className="col-md-12 offset-1" >
 					<Breadcrumb tag="nav">
 						<BreadcrumbItem active tag="span">receipts</BreadcrumbItem>
 					</Breadcrumb>
-				</div>
-			<Container className="mt-5">
-				<Row>
-					<Col sm='6'>
-						<FilterClave onTextUpdate={ this.updateTextFilter } />
-					</Col>
-					<Col sm='6'>
-						<FilterPagos updateSearchState={ this.updateSearchState } />
-					</Col>
-					<Col sm='6'>
-						<FilterFecha
-							prefix="Fecha de Pago"
-							updateSearchPagoStart={ this.updateSearchPagoStart }
-							updateSearchPagoEnd={ this.updateSearchPagoEnd }
-							start={ this.state.start_pdate }
-							end={ this.state.end_pdate }
-						/>
-					</Col>
-					<Col sm='6'>
-						<FilterFecha
-							prefix="Fecha de Timbrado"
-							updateSearchPagoStart={ this.updateSearchTimbradoStart }
-							updateSearchPagoEnd={ this.updateSearchTimbradoEnd }
-							start={ this.state.start_sdate }
-							end={ this.state.end_sdate }
-						/>
-					</Col>
-				</Row>
-				<Row>
-					<Col sm={{ size: 2, offset: 10 }}>
-						<Button color="info" onClick={ this.retrieveFilteredReceipts } >Filtrar</Button>
-					</Col>
-				</Row>
-			</Container>
-			</Col>
+						<Container className="mt-5">
+							<Row>
+								<Col sm='6'>
+									<FilterClave onTextUpdate={ this.updateTextFilter } />
+									<FilterFecha
+											prefix="Fecha de Pago"
+											updateSearchPagoStart={ this.updateSearchPagoStart }
+											updateSearchPagoEnd={ this.updateSearchPagoEnd }
+											start={ this.state.start_pdate }
+											end={ this.state.end_pdate }
+										/>
+								</Col>
+								<Col sm='6'>
+									<FilterPagos updateSearchState={ this.updateSearchState } />
+									<FilterFecha
+										prefix="Fecha de Timbrado"
+										updateSearchPagoStart={ this.updateSearchTimbradoStart }
+										updateSearchPagoEnd={ this.updateSearchTimbradoEnd }
+										start={ this.state.start_sdate }
+										end={ this.state.end_sdate }
+									/>
+								</Col>
+							</Row>
+							<Row>
+								<Col sm={{ size: 2, offset: 10 }}>
+									<Button color="info" onClick={ this.retrieveFilteredReceipts } >Filtrar</Button>
+								</Col>
+							</Row>
+						</Container>
+				</Col>
+			</Row>
 		);
 	}
 }
