@@ -99,11 +99,13 @@ class FilterContainer extends Component {
 									/>
 								</Col>
 							</Row>
+							<br/>
 							<Row>
-								<Col sm={{ size: 2, offset: 10 }}>
+								<Col sm={{ size: 2, offset: 12 }}>
 									<Button color="info" onClick={ this.retrieveFilteredReceipts } >Filtrar</Button>
 								</Col>
 							</Row>
+							<br/>
 						</Container>
 				</Col>
 			</Row>

@@ -37,15 +37,15 @@ const CustomColumn1 = ({value}) => <Badge color={stateMap[value][1]}>{ stateMap[
 const OptionsComponent = ({ value, griddleKey, rowData }) => {
 	if(rowData.state === "U"){
 		return(
-			<Link to="/AutoFacturador"><Button type="button"><i className="fa fa-list" /> Facturar</Button></Link>
+			<Link className="pull-right" to="/AutoFacturador"><Button type="button"><i className="fa fa-list" /> Facturar</Button></Link>
 		);
 	} else if(rowData.state === "I"){
 		return(
-			<Link to={`/receipts/${rowData.code}`}><button type="button"><i className="fa fa-list" />  <i className="fa fa-info-circle" /></button></Link>
+			<Link className="pull-right" to={`/receipts/${rowData.code}`}><button type="button"><i className="fa fa-list" /><i className="fa fa-info-circle" /></button></Link>
 		);
 	} else {
 		return(
-			<button><i className="fa fa-reply-all" aria-hidden="true"></i> Refacturar</button>
+			<button className="pull-right"><i className="fa fa-reply-all" aria-hidden="true"></i> Refacturar</button>
 		);
 	}
 }
