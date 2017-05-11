@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { Badge,Table,InputGroup, InputGroupAddon, Input,Breadcrumb, BreadcrumbItem   } from 'reactstrap';
+import {Col, Badge,Table,InputGroup, InputGroupAddon, Input,Breadcrumb, BreadcrumbItem   } from 'reactstrap';
 
 import { fetchPagos } from '../actions/receipt';
 
@@ -46,20 +46,20 @@ class DetalleFactura extends Component {
 					return (
 			<div>
 				<div>
-				 <Breadcrumb tag="nav">
-					 <BreadcrumbItem tag="a" href="/">receipts</BreadcrumbItem>
-					 <BreadcrumbItem active tag="span">Detalle</BreadcrumbItem>
-				 </Breadcrumb>
-			</div>
+					<Breadcrumb tag="nav">
+						<BreadcrumbItem tag="a" href="/">receipts</BreadcrumbItem>
+						<BreadcrumbItem active tag="span">Detalle</BreadcrumbItem>
+					</Breadcrumb>
+				</div>
 				<div className="col-sm-6 col-sm-offset-3">
-					<h2>Detalle de Pago</h2>
+					<h3>Detalle de Pago</h3>
 					<br/>
-					<InputGroupAddon className="text-left">Resumen:</InputGroupAddon>
-					<div>
+					<Col sm={{size:12,push:3, pull:3,offset:3}}>
+						<InputGroupAddon className="text-left">Resumen:</InputGroupAddon>
 						<Table>
 							<thead>
 								<tr>
-									<td className="col-sm-3"></td>
+									<td className="col-sm-9"></td>
 									<td className="col-sm-9"></td>
 								</tr>
 							</thead>
@@ -96,7 +96,7 @@ class DetalleFactura extends Component {
 								</td>
 							</tbody>
 						</Table>
-					</div>
+					</Col>
 				</div>
 				<hr/>
 				<h2 className="text-center">Comprobantes</h2>

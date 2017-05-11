@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 
-import { Container, Row, Col, Button } from 'reactstrap';
+import { Container, Row, Col, Button,Breadcrumb, BreadcrumbItem } from 'reactstrap';
 
 import FilterClave from '../components/FilterClave';
 import FilterPagos from '../components/FilterPagos';
@@ -71,6 +71,12 @@ class FilterContainer extends Component {
 
 	render() {
 		return (
+			<Col className="col-md-12 offset-1" >
+			<div>
+					<Breadcrumb tag="nav">
+						<BreadcrumbItem active tag="span">receipts</BreadcrumbItem>
+					</Breadcrumb>
+				</div>
 			<Container className="mt-5">
 				<Row>
 					<Col sm='6'>
@@ -104,6 +110,7 @@ class FilterContainer extends Component {
 					</Col>
 				</Row>
 			</Container>
+			</Col>
 		);
 	}
 }

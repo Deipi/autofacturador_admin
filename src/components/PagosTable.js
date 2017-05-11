@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import Griddle, { ColumnDefinition,RowDefinition,plugins} from 'griddle-react';
-import { Badge,Button} from 'reactstrap';
+import { Badge,Button,Col} from 'reactstrap';
 import { Link } from 'react-router-dom'
 
 import { connect } from 'react-redux';
@@ -45,7 +45,7 @@ const OptionsComponent = ({ value, griddleKey, rowData }) => {
 		);
 	} else {
 		return(
-			<h8> Cancelado</h8>
+			<button><i className="fa fa-reply-all" aria-hidden="true"></i> Refacturar</button>
 		);
 	}
 }
@@ -55,23 +55,25 @@ export class PagosTable extends Component {
 		const { props: { pagos } } = this;
 
 		return (
-			<Griddle data={ pagos.toJS()}
-				plugins={[plugins.LocalPlugin]}
-				styleConfig={{classNames:
-				 { Table: 'table table-striped',} }}
-				 components={{
-					Layout: NewLayout }}>
-				<RowDefinition>
-					<ColumnDefinition id="code" title="Codigo" visible />
-					<ColumnDefinition id="state" title="Estado" visible customComponent={CustomColumn1}/>
-					<ColumnDefinition id="payment_date" title="Fecha de Pago"visible/>
-					<ColumnDefinition id="sub_total" title="Sub Total"visible/>
-					<ColumnDefinition id="transferred_taxes" title="Impuestos Transferidos"visible/>
-					<ColumnDefinition id="retained_taxes" title="Impuestos retenidos"visible/>
-					<ColumnDefinition id="total"title="Total" visible/>
-					<ColumnDefinition id="option"  title="Opciones"visible customComponent={ enhancedWithRowData(OptionsComponent) } />
-				</RowDefinition>
-			</Griddle>
+			<Col className="col-md-12 offset-1" >
+				<Griddle data={ pagos.toJS()}
+					plugins={[plugins.LocalPlugin]}
+					styleConfig={{classNames:
+					 { Table: 'table table-striped',} }}
+					 components={{
+						Layout: NewLayout }}>
+					<RowDefinition>
+						<ColumnDefinition id="code" title="Codigo" visible />
+						<ColumnDefinition id="state" title="Estado" visible customComponent={CustomColumn1}/>
+						<ColumnDefinition id="payment_date" title="Fecha de Pago"visible/>
+						<ColumnDefinition id="sub_total" title="Sub Total"visible/>
+						<ColumnDefinition id="transferred_taxes" title="Impuestos Transferidos"visible/>
+						<ColumnDefinition id="retained_taxes" title="Impuestos retenidos"visible/>
+						<ColumnDefinition id="total"title="Total" visible/>
+						<ColumnDefinition id="option"  title="Opciones"visible customComponent={ enhancedWithRowData(OptionsComponent) } />
+					</RowDefinition>
+				</Griddle>
+			</Col>
 		);
 	}
 }

@@ -166,6 +166,10 @@
       "transferred_taxes": "0",
       "retained_taxes": "12",
       "sub_total": "25",
+      "concepto":[
+        "fanta",
+        "tacos al pastor"
+      ],
       "id": 12
     },
     {
