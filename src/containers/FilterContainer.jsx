@@ -72,7 +72,7 @@ class FilterContainer extends Component {
 	render() {
 		return (
 			<Row>
-				<Col className="col-md-12 offset-1" >
+				<Col className="col-md-12 " >
 					<Breadcrumb tag="nav">
 						<BreadcrumbItem active tag="span">receipts</BreadcrumbItem>
 					</Breadcrumb>

@@ -55,7 +55,7 @@ export class PagosTable extends Component {
 		const { props: { pagos } } = this;
 
 		return (
-			<Col className="col-md-12 offset-1" >
+			<Col className="col-md-12" >
 				<Griddle data={ pagos.toJS()}
 					plugins={[plugins.LocalPlugin]}
 					styleConfig={{classNames:

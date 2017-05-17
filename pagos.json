@@ -1,192 +1,258 @@
 {
-  "pagos": [
-    {
-      "code": "151833|6KFG266",
-      "state": "U",
-      "payment_date": "2016-08-01",
-      "sub_total": "12.06",
-      "transferred_taxes": "1.94",
-      "total": "14",
-      "retained_taxes": "0",
-      "concepto":[
-        "agua",
-        "huevo"
-      ],
-      "id": 1
+	"pagos": [
+		{
+			"code": "151833|6KFG266",
+			"state": "U",
+			"payment_date": "2016-08-01",
+			"rfc": "jose5342gsjxh",
+			"sub_total": "12.06",
+			"transferred_taxes": "1.94",
+			"total": "14",
+			"retained_taxes": "0",
+			"concepto":[
+				"agua",
+				"huevo"
+			],
+			"id": 1,
+			"invoice_data":{
+					"receptor": "pepe",
+					"uuid": "12345678-09876543-12345678-12309456-34322-234-2345654-23432"
+			}
 
-    },
-    {
-      "code": "151833|6KFG266",
-      "state": "U",
-      "payment_date": "2016-08-01",
-      "sub_total": "15",
-      "transferred_taxes": "0",
-      "retained_taxes": "0",
-      "total": "15",
-      "concepto":[
-        "agua",
-        "torta",
-        "filete"
-      ],
-      "id": 2
-    },
-    {
-      "code": "151833|6KFG266",
-      "state": "U",
-      "payment_date": "2016-08-01",
-      "sub_total": "25",
-      "transferred_taxes": "0",
-      "retained_taxes": "0",
-      "total": "25",
-      "concepto":[
-        "agua",
-        "filete"
-      ],
-      "id": 3
-    },
-    {
-      "code": "151833|6KFG266",
-      "state": "U",
-      "payment_date": "2016-08-01",
-      "total": "36",
-      "transferred_taxes": "0",
-      "retained_taxes": "0",
-      "sub_total": "36",
-      "concepto":[
-        "refresco",
-        "torta"
-      ],
-      "id": 4
-    },
-    {
-      "code": "151834|6KFG267",
-      "state": "U",
-      "payment_date": "2016-08-01",
-      "total": "14",
-      "transferred_taxes": "0",
-      "retained_taxes": "0",
-      "sub_total": "14",
-      "concepto":[
-        "camarones",
-        "agua limon"
-      ],
-      "id": 5
-    },
-    {
-      "code": "151834|6KFG267",
-      "state": "U",
-      "payment_date": "2016-08-01",
-      "total": "15",
-      "transferred_taxes": "0",
-      "retained_taxes": "0",
-      "sub_total": "15",
-      "concepto":[
-        "salchicas",
-        "pizza"
-      ],
-      "id": 6
-    },
-    {
-      "code": "151835|6KFG268",
-      "state": "U",
-      "payment_date": "2016-08-01",
-      "total": "14",
-      "transferred_taxes": "0",
-      "retained_taxes": "0",
-      "sub_total": "14",
-      "concepto":[
-        "pescado",
-        "refresco",
-        "agua"
-      ],
-      "id": 7
-    },
-    {
-      "code": "151835|6KFG268",
-      "state": "U",
-      "payment_date": "2016-08-01",
-      "total": "15",
-      "transferred_taxes": "0",
-      "retained_taxes": "0",
-      "sub_total": "15",
-      "concepto":[
-        "Torta jamon",
-        "agua limon"
-      ],
-      "id": 8
-    },
-    {
-      "code": "151835|6KFG268",
-      "state": "U",
-      "payment_date": "2016-08-01",
-      "total": "25",
-      "transferred_taxes": "0",
-      "retained_taxes": "0",
-      "sub_total": "25",
-      "concepto":[
-        "pechuga de pollo",
-        "agua frsca"
-      ],
-      "id": 9
-    },
-    {
-      "code": "134435|6hFG268",
-      "state": "I",
-      "payment_date": "2016-08-01",
-      "total": "25",
-      "transferred_taxes": "0",
-      "retained_taxes": "0",
-      "sub_total": "25",
-      "concepto":[
-        "menudo",
-        "refresco",
-        "doritos"
-      ],
-      "id": 10
-    },
-    {
-      "code": "121835|6KkG268",
-      "state": "I",
-      "payment_date": "2016-08-01",
-      "total": "25",
-      "transferred_taxes": "0",
-      "retained_taxes": "0",
-      "sub_total": "25",
-      "concepto":[
-        "refresco",
-        "tacos dorados"
-      ],
-      "id": 11
-    },
-    {
-      "code": "141552|6KvG268",
-      "state": "E",
-      "payment_date": "2017-09-02",
-      "total": "55",
-      "transferred_taxes": "0",
-      "retained_taxes": "12",
-      "sub_total": "25",
-      "concepto":[
-        "fanta",
-        "tacos al pastor"
-      ],
-      "id": 12
-    },
-    {
-      "code": "111552|6KvG262",
-      "state": "I",
-      "payment_date": "2017-08-02",
-      "total": "55",
-      "transferred_taxes": "0",
-      "retained_taxes": "12",
-      "sub_total": "25",
-      "concepto":[
-        "fanta",
-        "filete",
-        "torta"
-      ],
-      "id": 13
-    }
 
-  ]
+		},
+		{
+			"code": "151833|6KFG266",
+			"state": "U",
+			"payment_date": "2016-08-01",
+			"rfc": "jose5342gsjxh",
+			"sub_total": "15",
+			"transferred_taxes": "0",
+			"retained_taxes": "0",
+			"total": "15",
+			"concepto":[
+				"agua",
+				"torta",
+				"filete"
+			],
+			"id": 2,
+			"invoice_data":{
+					"receptor": "pepe",
+					"uuid": "12345678-09876543-12345678-12309456-34322-234-2345654-23432"
+			}
+		},
+		{
+			"code": "151833|6KFG266",
+			"state": "U",
+			"payment_date": "2016-08-01",
+			"rfc": "jose5342gsjxh",
+			"sub_total": "25",
+			"transferred_taxes": "0",
+			"retained_taxes": "0",
+			"total": "25",
+			"concepto":[
+				"agua",
+				"filete"
+			],
+			"id": 3,
+			"invoice_data":{
+					"receptor": "pepe",
+					"uuid": "12345678-09876543-12345678-12309456-34322-234-2345654-23432"
+			}
+		},
+		{
+			"code": "151833|6KFG266",
+			"state": "U",
+			"payment_date": "2016-08-01",
+			"rfc": "jose5342gsjxh",
+			"total": "36",
+			"transferred_taxes": "0",
+			"retained_taxes": "0",
+			"sub_total": "36",
+			"concepto":[
+				"refresco",
+				"torta"
+			],
+			"id": 4,
+			"invoice_data":{
+					"receptor": "pepe",
+					"uuid": "12345678-09876543-12345678-12309456-34322-234-2345654-23432"
+			}
+		},
+		{
+			"code": "151834|6KFG267",
+			"state": "U",
+			"payment_date": "2016-08-01",
+			"rfc": "jose5342gsjxh",
+			"total": "14",
+			"transferred_taxes": "0",
+			"retained_taxes": "0",
+			"sub_total": "14",
+			"concepto":[
+				"camarones",
+				"agua limon"
+			],
+			"id": 5,
+			"invoice_data":{
+					"receptor": "pepe",
+					"uuid": "12345678-09876543-12345678-12309456-34322-234-2345654-23432"
+			}
+		},
+		{
+			"code": "151834|6KFG267",
+			"state": "U",
+			"payment_date": "2016-08-01",
+			"rfc": "jose5342gsjxh",
+			"total": "15",
+			"transferred_taxes": "0",
+			"retained_taxes": "0",
+			"sub_total": "15",
+			"concepto":[
+				"salchicas",
+				"pizza"
+			],
+			"id": 6,
+			"invoice_data":{
+					"receptor": "pepe",
+					"uuid": "12345678-09876543-12345678-12309456-34322-234-2345654-23432"
+			}
+		},
+		{
+			"code": "151835|6KFG268",
+			"state": "U",
+			"payment_date": "2016-08-01",
+			"rfc": "jose5342gsjxh",
+			"total": "14",
+			"transferred_taxes": "0",
+			"retained_taxes": "0",
+			"sub_total": "14",
+			"concepto":[
+				"pescado",
+				"refresco",
+				"agua"
+			],
+			"id": 7,
+			"invoice_data":{
+					"receptor": "pepe",
+					"uuid": "12345678-09876543-12345678-12309456-34322-234-2345654-23432"
+			}
+		},
+		{
+			"code": "151835|6KFG268",
+			"state": "U",
+			"payment_date": "2016-08-01",
+			"rfc": "jose5342gsjxh",
+			"total": "15",
+			"transferred_taxes": "0",
+			"retained_taxes": "0",
+			"sub_total": "15",
+			"concepto":[
+				"Torta jamon",
+				"agua limon"
+			],
+			"id": 8,
+			"invoice_data":{
+					"receptor": "pepe",
+					"uuid": "12345678-09876543-12345678-12309456-34322-234-2345654-23432"
+			}
+		},
+		{
+			"code": "151835|6KFG268",
+			"state": "U",
+			"payment_date": "2016-08-01",
+			"rfc": "jose5342gsjxh",
+			"total": "25",
+			"transferred_taxes": "0",
+			"retained_taxes": "0",
+			"sub_total": "25",
+			"concepto":[
+				"pechuga de pollo",
+				"agua frsca"
+			],
+			"id": 9,
+			"invoice_data":{
+					"receptor": "pepe",
+					"uuid": "12345678-09876543-12345678-12309456-34322-234-2345654-23432"
+			}
+		},
+		{
+			"code": "134435|6hFG268",
+			"state": "I",
+			"payment_date": "2016-08-01",
+			"rfc": "jose5342gsjxh",
+			"total": "25",
+			"transferred_taxes": "0",
+			"retained_taxes": "0",
+			"sub_total": "25",
+			"concepto":[
+				"menudo",
+				"refresco",
+				"doritos"
+			],
+			"id": 10,
+			"invoice_data":{
+					"receptor": "pepe",
+					"uuid": "12345678-09876543-12345678-12309456-34322-234-2345654-23432"
+			}
+		},
+		{
+			"code": "121835|6KkG268",
+			"state": "I",
+			"payment_date": "2016-08-01",
+			"rfc": "jose5342gsjxh",
+			"total": "25",
+			"transferred_taxes": "0",
+			"retained_taxes": "0",
+			"sub_total": "25",
+			"concepto":[
+				"refresco",
+				"tacos dorados"
+			],
+			"id": 11,
+			"invoice_data":{
+					"receptor": "pepe",
+					"uuid": "12345678-09876543-12345678-12309456-34322-234-2345654-23432"
+			}
+		},
+		{
+			"code": "141552|6KvG268",
+			"state": "E",
+			"payment_date": "2017-09-02",
+			"rfc": "jose5342gsjxh",
+			"total": "55",
+			"transferred_taxes": "0",
+			"retained_taxes": "12",
+			"sub_total": "25",
+			"concepto":[
+				"fanta",
+				"tacos al pastor"
+			],
+			"id": 12,
+			"invoice_data":{
+					"receptor": "pepe",
+					"uuid": "12345678-09876543-12345678-12309456-34322-234-2345654-23432"
+			}
+		},
+		{
+			"code": "111552|6KvG262",
+			"state": "I",
+			"payment_date": "2017-08-02",
+			"rfc": "jose5342gsjxh",
+			"total": "55",
+			"transferred_taxes": "0",
+			"retained_taxes": "12",
+			"sub_total": "25",
+			"concepto":[
+				"fanta",
+				"filete",
+				"torta"
+			],
+			"id": 13,
+			"invoice_data":{
+					"receptor": "pepe",
+					"uuid": "12345678-09876543-12345678-12309456-34322-234-2345654-23432"
+			}
+		}
+
+	]
 }

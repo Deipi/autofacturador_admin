@@ -4,7 +4,8 @@ import App from './App';
 
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
+import thunk from 'redux-thunk'
+import { Container} from 'reactstrap';;
 import {
   BrowserRouter as Router,
   Route,
@@ -52,16 +53,18 @@ ReactDOM.render(
 	<Provider store={ store }>
 		<Router>
 			<App>
-			  <div style={{ display: 'flex' }}>
+			  <div>
 				  <div id="Contenido" >
-					{routes.map((route, index) => (
-					  <Route
-						key={index}
-						path={route.path}
-						exact={route.exact}
-						component={route.main}
-					  />
-					))}
+					<Container>
+						{routes.map((route, index) => (
+						  <Route
+							key={index}
+							path={route.path}
+							exact={route.exact}
+							component={route.main}
+						  />
+						))}
+					</Container>
 				  </div>
 				</div>
 			</App>
