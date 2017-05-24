@@ -16,6 +16,7 @@ import immutable from 'immutable';
 
 import { reducer as formReducer } from 'redux-form/immutable'
 import pagosReducers from './reducers/receipt';
+import detalleReducers from './reducers/invoice';
 import PagosContainer from '../src/containers/PagosContainer'
 import AutoFacturador from '../src/components/AutoFacturador'
 import DetalleFactura from '../src/components/DetalleFactura'
@@ -28,6 +29,7 @@ const initialState = immutable.Map();
 const rootReducer = combineReducers({
   form: formReducer,
   pagos: pagosReducers,
+  invoice: detalleReducers,
 });
 
 const store = createStore(rootReducer,initialState, applyMiddleware(thunk));

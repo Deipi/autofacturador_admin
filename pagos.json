@@ -10,8 +10,19 @@
 			"total": "14",
 			"retained_taxes": "0",
 			"concepto":[
-				"agua",
-				"huevo"
+				{
+					"cantidad":"1",
+					"unidad":"lt",
+					"descripcion":"agua",
+					"precio_unitario":"20.00"
+
+				},
+				{
+					"cantidad":"1",
+					"unidad":"KG",
+					"descripcion":"huevo",
+					"precio_unitario":"30.00"
+				}
 			],
 			"id": 1,
 			"invoice_data":{
@@ -31,9 +42,27 @@
 			"retained_taxes": "0",
 			"total": "15",
 			"concepto":[
-				"agua",
-				"torta",
-				"filete"
+				{
+					"cantidad":"1",
+					"unidad":"lt",
+					"descripcion":"agua",
+					"precio_unitario":"20.00"
+
+				},
+				{
+					"cantidad":"1",
+					"unidad":"KG",
+					"descripcion":"torta",
+					"precio_unitario":"15.00"
+
+				},
+				{
+					"cantidad":"1",
+					"unidad":"KG",
+					"descripcion":"filete",
+					"precio_unitario":"85.00"
+
+				}
 			],
 			"id": 2,
 			"invoice_data":{
@@ -51,8 +80,20 @@
 			"retained_taxes": "0",
 			"total": "25",
 			"concepto":[
-				"agua",
-				"filete"
+				{
+					"cantidad":"1",
+					"unidad":"KG",
+					"descripcion":"agua",
+					"precio_unitario":"10.00"
+
+				},
+				{
+					"cantidad":"1",
+					"unidad":"KG",
+					"descripcion":"filete",
+					"precio_unitario":"80.00"
+
+				}
 			],
 			"id": 3,
 			"invoice_data":{
@@ -70,8 +111,20 @@
 			"retained_taxes": "0",
 			"sub_total": "36",
 			"concepto":[
-				"refresco",
-				"torta"
+				{
+					"cantidad":"1",
+					"unidad":"KG",
+					"descripcion":"refresco",
+					"precio_unitario":"20.00"
+
+				},
+				{
+					"cantidad":"1",
+					"unidad":"KG",
+					"descripcion":"torta",
+					"precio_unitario":"20.00"
+
+				}
 			],
 			"id": 4,
 			"invoice_data":{
@@ -89,8 +142,20 @@
 			"retained_taxes": "0",
 			"sub_total": "14",
 			"concepto":[
-				"camarones",
-				"agua limon"
+				{
+					"cantidad":"1",
+					"unidad":"KG",
+					"descripcion":"agua limon",
+					"precio_unitario":"40.00"
+
+				},
+				{
+					"cantidad":"1",
+					"unidad":"KG",
+					"descripcion":"camarones",
+					"precio_unitario":"100.00"
+
+				}
 			],
 			"id": 5,
 			"invoice_data":{
@@ -108,8 +173,20 @@
 			"retained_taxes": "0",
 			"sub_total": "15",
 			"concepto":[
-				"salchicas",
-				"pizza"
+				{
+					"cantidad":"1",
+					"unidad":"KG",
+					"descripcion":"salchichas",
+					"precio_unitario":"25.00"
+
+				},
+				{
+					"cantidad":"1",
+					"unidad":"KG",
+					"descripcion":"pizza",
+					"precio_unitario":"120.00"
+
+				}
 			],
 			"id": 6,
 			"invoice_data":{
@@ -127,9 +204,27 @@
 			"retained_taxes": "0",
 			"sub_total": "14",
 			"concepto":[
-				"pescado",
-				"refresco",
-				"agua"
+				{
+					"cantidad":"1",
+					"unidad":"KG",
+					"descripcion":"pescado",
+					"precio_unitario":"150.00"
+
+				},
+				{
+					"cantidad":"1",
+					"unidad":"KG",
+					"descripcion":"refresco",
+					"precio_unitario":"20.00"
+
+				},
+				{
+					"cantidad":"1",
+					"unidad":"KG",
+					"descripcion":"agua",
+					"precio_unitario":"20.00"
+
+				}
 			],
 			"id": 7,
 			"invoice_data":{
@@ -147,8 +242,20 @@
 			"retained_taxes": "0",
 			"sub_total": "15",
 			"concepto":[
-				"Torta jamon",
-				"agua limon"
+				{
+					"cantidad":"1",
+					"unidad":"KG",
+					"descripcion":"Torta jamon",
+					"precio_unitario":"20.00"
+
+				},
+				{
+					"cantidad":"1",
+					"unidad":"KG",
+					"descripcion":"agua de limon",
+					"precio_unitario":"20.00"
+
+				}
 			],
 			"id": 8,
 			"invoice_data":{
@@ -166,8 +273,20 @@
 			"retained_taxes": "0",
 			"sub_total": "25",
 			"concepto":[
-				"pechuga de pollo",
-				"agua frsca"
+				{
+					"cantidad":"1",
+					"unidad":"KG",
+					"descripcion":"pechuga de pollo",
+					"precio_unitario":"55.00"
+
+				},
+				{
+					"cantidad":"1",
+					"unidad":"KG",
+					"descripcion":"agua fresca",
+					"precio_unitario":"20.00"
+
+				}
 			],
 			"id": 9,
 			"invoice_data":{
@@ -185,9 +304,27 @@
 			"retained_taxes": "0",
 			"sub_total": "25",
 			"concepto":[
-				"menudo",
-				"refresco",
-				"doritos"
+				{
+					"cantidad":"1",
+					"unidad":"KG",
+					"descripcion":"menudo",
+					"precio_unitario":"45.00"
+
+				},
+				{
+					"cantidad":"1",
+					"unidad":"KG",
+					"descripcion":"refresco",
+					"precio_unitario":"20.00"
+
+				},
+				{
+					"cantidad":"1",
+					"unidad":"KG",
+					"descripcion":"doritos",
+					"precio_unitario":"10.00"
+
+				}
 			],
 			"id": 10,
 			"invoice_data":{
@@ -205,8 +342,20 @@
 			"retained_taxes": "0",
 			"sub_total": "25",
 			"concepto":[
-				"refresco",
-				"tacos dorados"
+				{
+					"cantidad":"1",
+					"unidad":"KG",
+					"descripcion":"refresco",
+					"precio_unitario":"15.00"
+
+				},
+				{
+					"cantidad":"1",
+					"unidad":"KG",
+					"descripcion":"tacos dorados",
+					"precio_unitario":"30.00"
+
+				}
 			],
 			"id": 11,
 			"invoice_data":{
@@ -224,8 +373,20 @@
 			"retained_taxes": "12",
 			"sub_total": "25",
 			"concepto":[
-				"fanta",
-				"tacos al pastor"
+				{
+					"cantidad":"1",
+					"unidad":"KG",
+					"descripcion":"refresco sabor",
+					"precio_unitario":"20.00"
+
+				},
+				{
+					"cantidad":"1",
+					"unidad":"KG",
+					"descripcion":"tacos al pastor",
+					"precio_unitario":"60.00"
+
+				}
 			],
 			"id": 12,
 			"invoice_data":{
@@ -243,9 +404,24 @@
 			"retained_taxes": "12",
 			"sub_total": "25",
 			"concepto":[
-				"fanta",
-				"filete",
-				"torta"
+				{
+					"cantidad":"1",
+					"unidad":"KG",
+					"descripcion":"refresco",
+					"precio_unitario":"20.00"
+				},
+				{
+					"cantidad":"1",
+					"unidad":"KG",
+					"descripcion":"filete",
+					"precio_unitario":"120.00"
+				},
+				{
+					"cantidad":"1",
+					"unidad":"KG",
+					"descripcion":"torta",
+					"precio_unitario":"20.00"
+				}
 			],
 			"id": 13,
 			"invoice_data":{
