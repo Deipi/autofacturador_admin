@@ -20,6 +20,11 @@ const stateMap = {
 	"I": ["Facturado", "success"],
 	"E": ["Cancelada", "danger"]
 }
+const stateMapd = {
+	"U": ["Pago", "default"],
+	"I": ["Timbrado", "success"],
+	"E": ["Cancelada", "danger"]
+}
 const NewLayout = ({ Table,Pagination}) => (
   <div>
 	<Table />
@@ -28,8 +33,7 @@ const NewLayout = ({ Table,Pagination}) => (
 );
 
 const CustomColumn = ({value}) => <h5>Facturado</h5>;
-const CustomColumn1 = ({value}) => <Badge color={stateMap[value][1]}>{ stateMap[value][0] }</Badge>;
-
+const CustomColumn1 = ({value}) => <Badge color={stateMapd[value][1]}>{ stateMapd[value][0] }</Badge>;
 //pago.get('invoice_data').map(p=><li>{p}</li>)
 
 
@@ -63,82 +67,83 @@ class DetalleFactura extends Component {
 		const CustomColumn2 = () =>{pago.get('invoice_data').map(p=><li>{p}</li>)};
 
 		if(pago) {
-		return (
-			<div>
+			return (
 				<div>
-					<Breadcrumb tag="nav">
-						<Link  to="/"><BreadcrumbItem tag="a" href="">receipts</BreadcrumbItem></Link>
-						<BreadcrumbItem active tag="span"> / Detalle</BreadcrumbItem>
-					</Breadcrumb>
-				</div>
-				<div className="col-sm-6 col-sm-offset-3">
-					<h3>Detalle de Pago</h3>
-					<br/>
-					<Col sm={{size:12,push:3, pull:3,offset:3}}>
-						<InputGroupAddon className="text-left">Resumen:</InputGroupAddon>
-						<Table>
-							<thead>
-								<tr>
-									<td className="col-sm-9"></td>
-									<td className="col-sm-9"></td>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<th scope="row">Clave: </th>
-									<td>{ pago.get('code') }</td>
-								</tr>
-								<tr>
-									<th scope="row">Estado:</th>
-									<td><Badge color={stateMap[pago.get('state')][1]}>{ stateMap[pago.get('state')][0] }</Badge></td>
-									<td></td>
-								</tr>
-								<tr>
-									<th scope="row">Fecha de pago:</th>
-									<td>{ pago.get('payment_date') }</td>
-								</tr>
-								<tr>
-									<th scope="row">Total:</th>
-									<td>{ pago.get('total') }</td>
-								</tr>
-								<th scope="row">
-									Concepto del pago:
-								</th>
-								<td>
-									<ul>
-										<li>{ pago.get('concepto') ? pago.get('concepto').map(concept=>(
-											<div key={ concept }>
-												<li>{ concept.toJS().descripcion }</li>
-											</div>
-											)):null }
-										</li>
-									 </ul>
-								</td>
-							</tbody>
-						</Table>
+					<div>
+						<Breadcrumb tag="nav">
+							<Link  to="/"><BreadcrumbItem tag="a" href="">receipts</BreadcrumbItem></Link>
+							<BreadcrumbItem active tag="span"> / Detalle</BreadcrumbItem>
+						</Breadcrumb>
+					</div>
+					<div className="col-sm-6 col-sm-offset-3">
+						<h3>Detalle de Pago</h3>
+						<br/>
+						<Col sm={{size:12,push:3, pull:3,offset:3}}>
+							<InputGroupAddon className="text-left">Resumen:</InputGroupAddon>
+							<Table>
+								<thead>
+									<tr>
+										<td className="col-sm-9"></td>
+										<td className="col-sm-9"></td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">Clave: </th>
+										<td>{ pago.get('code') }</td>
+									</tr>
+									<tr>
+										<th scope="row">Estado:</th>
+										<td><Badge color={stateMap[pago.get('state')][1]}>{ stateMap[pago.get('state')][0] }</Badge></td>
+										<td></td>
+									</tr>
+									<tr>
+										<th scope="row">Fecha de pago:</th>
+										<td>{ pago.get('payment_date') }</td>
+									</tr>
+									<tr>
+										<th scope="row">Total:</th>
+										<td>{"$"} { pago.get('total') }</td>
+									</tr>
+									<th scope="row">
+										Concepto del pago:
+									</th>
+									<td>
+										<ul>
+											<li>{ pago.get('concepto') ? pago.get('concepto').map(concept=>(
+												<div key={ concept }>
+													<li>{ concept.toJS().descripcion }</li>
+												</div>
+												)):null }
+											</li>
+										 </ul>
+									</td>
+								</tbody>
+							</Table>
+						</Col>
+					</div>
+					<hr/>
+					<h2 className="text-center">Comprobantes</h2>
+					<Col className="col-md-12" >
+						<Griddle data={detalle.toJS()}
+							plugins={[plugins.LocalPlugin]}
+							plugins={[plugin]}
+							pago={this.props.pago}
+							styleConfig={{classNames:
+							 { Table: 'table table-striped',} }}
+							  components={{
+							Layout: NewLayout
+							}}>
+							<RowDefinition>
+								<ColumnDefinition id="type" title="Tipo" visible  customComponent={CustomColumn} />
+								<ColumnDefinition id="state" title="Estado" visible customComponent={CustomColumn1}/>
+								<ColumnDefinition id="name" title="Receptor" visible />
+								<ColumnDefinition id="uuid" title="uuid"  visible />
+							</RowDefinition>
+						</Griddle>
 					</Col>
 				</div>
-				<hr/>
-				<h2 className="text-center">Comprobantes</h2>
-				<Col className="col-md-12" >
-					<Griddle data={detalle.toJS()}
-						plugins={[plugins.LocalPlugin]}
-						plugins={[plugin]}
-						styleConfig={{classNames:
-						 { Table: 'table table-striped',} }}
-						  components={{
-						Layout: NewLayout
-						}}>
-						<RowDefinition>
-							<ColumnDefinition id="type" title="Tipo" visible  customComponent={CustomColumn} />
-							<ColumnDefinition id="state" title="Estado" visible customComponent={CustomColumn1}/>
-							<ColumnDefinition value="sfsd" title="Estado" visible />
-							</RowDefinition>
-					</Griddle>
-					{pago.get('invoice_data').map(p=><li>{p}</li>)}
-				</Col>
-			</div>
-		);
+			);
 		}
 		return null;
 	};
