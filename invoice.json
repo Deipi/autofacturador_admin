@@ -18,6 +18,18 @@
 			"cancelled_at":"01-05-2018",
 			"cancellation_message":"factura cancelada",
 			"state":"I",
+			"conceptos": [
+				{
+					"cantidad": 1,
+					"unidad": "Pieza",
+					"descripcion": "Algo",
+					"precio_unitario": 100
+				}
+			],
+			"receptor": {
+				"nombre": "Publico en General",
+				"rfc": "XAXX010101XXX"
+			},
 			"invoice_type":"factura"
 		},
 		{

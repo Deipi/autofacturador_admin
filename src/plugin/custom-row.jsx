@@ -35,10 +35,18 @@ export default class CustomRow extends Component {
 				columnIds,
 				style,
 				className,
-				rowData,
+				rowData
 			},
 		} = this;
-		const isOpen = rowData.get('isOpen');
+
+		const isOpen =rowData.get('isOpen'),
+			recipient_code =rowData.get('recipient_code'),
+			created_at =rowData.get('created_at'),
+			receptor =rowData.get('receptor'),
+			total =rowData.get('total'),
+			uuid =rowData.get('uuid'),
+			conceptos =rowData.get('conceptos');
+
 		return (
 			<tbody>
 				<tr
@@ -63,17 +71,17 @@ export default class CustomRow extends Component {
 						<div>
 							<hr/>
 							<h4>Resumen: </h4>
-							<strong className="span2 offset4">Clave: </strong>
+							<strong className="span2 offset4">Clave: </strong> { recipient_code }
 							<br/>
-							<strong>Fecha de pago: </strong>
+							<strong>Fecha de pago: </strong> { created_at }
 							<br/>
-							<strong>RFC: </strong>
+							<strong>RFC: </strong> { receptor.get('rfc') }
 							<br/>
-							<strong>Total: </strong>
+							<strong>Total: </strong> { total }
 							<br/>
-							<strong>Folio fiscal: </strong>
+							<strong>Folio fiscal: </strong> { uuid }
 							<br/>
-							<strong>Conceptos facturados: </strong>
+							<strong>Conceptos facturados: </strong> { conceptos.toJS().map(c => c['descripcion']).join(', ') }
 							<hr/>
 							<h2 className="text-center">Descargar</h2>
 							<div className="text-center">
