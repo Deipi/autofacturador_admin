@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import {Col,  Badge , Table , InputGroupAddon,Breadcrumb, BreadcrumbItem   } from 'reactstrap';
+import {Button,Col,  Badge , Table , InputGroupAddon,Breadcrumb, BreadcrumbItem   } from 'reactstrap';
 import Griddle, { ColumnDefinition,RowDefinition,plugins} from 'griddle-react';
 
 
@@ -14,6 +14,19 @@ const selector = state => ({
 	pagos: state.get('pagos'),
 	invoice: state.get('invoice')
 })
+
+const rowDataSelector = (state, { griddleKey }) => {
+	return state
+		.get('data')
+		.find(rowMap => rowMap.get('griddleKey') === griddleKey)
+		.toJSON();
+};
+
+const enhancedWithRowData = connect((state, props) => {
+	return {
+		rowData: rowDataSelector(state, props)
+	};
+});
 
 const stateMap = {
 	"U": ["Pago", "default"],
@@ -31,8 +44,29 @@ const NewLayout = ({ Table,Pagination}) => (
 	<Pagination />
   </div>
 );
+const OptionsComponent = ({ value, griddleKey, rowData }) => {
+	if(rowData.state === "I"){
+		return(
+			<Button  className="pull-right" type="button"><i className="fa fa-ban fa-fw" /> Cancelar</Button>
+		);
+	} else if(rowData.state === "E"){
+		return(
+			<button className="pull-right"><i className="fa fa-reply-all" aria-hidden="true"></i> Refacturar</button>
+		);
+	}
+}
+const OptionsComponent1 = ({ value, griddleKey, rowData }) => {
+	if(rowData.state === "I"){
+		return(
+		<h5>Facturado</h5>
+		);
+	} else if(rowData.state === "E"){
+		return(
+			<h5>Cancelado</h5>
+		);
+	}
+}
 
-const CustomColumn = ({value}) => <h5>Facturado</h5>;
 const CustomColumn1 = ({value}) => <Badge color={stateMapd[value][1]}>{ stateMapd[value][0] }</Badge>;
 
 class DetalleFactura extends Component {
@@ -131,10 +165,11 @@ class DetalleFactura extends Component {
 							Layout: NewLayout
 							}}>
 							<RowDefinition>
-								<ColumnDefinition id="type" title="Tipo" visible  customComponent={CustomColumn} />
+								<ColumnDefinition id="type" title="Tipo" visible  customComponent={enhancedWithRowData(OptionsComponent1)} />
 								<ColumnDefinition id="state" title="Estado" visible customComponent={CustomColumn1}/>
 								<ColumnDefinition id="name" title="Receptor" visible />
 								<ColumnDefinition id="uuid" title="uuid"  visible />
+								<ColumnDefinition id="option" title="opciones"  visible customComponent={ enhancedWithRowData(OptionsComponent) } />
 							</RowDefinition>
 						</Griddle>
 					</Col>

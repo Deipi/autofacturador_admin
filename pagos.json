@@ -298,7 +298,7 @@
 			"code": "134435|6hFG268",
 			"state": "I",
 			"payment_date": "2016-08-01",
-			"rfc": "jose5342gsjxh",
+			"rfc": "XAXX010101XXX",
 			"total": "25",
 			"transferred_taxes": "0",
 			"retained_taxes": "0",
@@ -329,7 +329,7 @@
 			"id": 10,
 			"invoice_data":{
 					"receptor": "pepe",
-					"uuid": "12345678-09876543-12345678-12309456-34322-234-2345654-23432"
+					"uuid": "224dwe-5433-234dsd3-34fce-434322"
 			}
 		},
 		{
