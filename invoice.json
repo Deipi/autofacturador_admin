@@ -36,7 +36,7 @@
 			"uuid": "224dwe-5433-234dsd3-34fce-244452",
 			"serie": "4356673f",
 			"folio": "6542346",
-			"name": "juan",
+			"name": "Juan",
 			"recipient_code": "141552|6KvG268",
 			"notes": "es una nota",
 			"sub_total":"33",
@@ -50,6 +50,18 @@
 			"cancelled_at":"01-05-2018",
 			"cancellation_message":"factura cancelada",
 			"state":"E",
+			"conceptos": [
+				{
+					"cantidad": 1,
+					"unidad": "Pieza",
+					"descripcion": "leche",
+					"precio_unitario": 100
+				}
+			],
+			"receptor": {
+				"nombre": "Publico en General",
+				"rfc": "XAXX010101XXX"
+			},
 			"invoice_type":"factura"
 		},
 		{
@@ -70,6 +82,18 @@
 			"cancelled_at":"01-05-2018",
 			"cancellation_message":"factura cancelada",
 			"state":"I",
+			"conceptos": [
+				{
+					"cantidad": 1,
+					"unidad": "Pieza",
+					"descripcion": "refresco",
+					"precio_unitario": 100
+				}
+			],
+			"receptor": {
+				"nombre": "Publico en General",
+				"rfc": "XAXX010101XXX"
+			},
 			"invoice_type":"factura"
 		},
 		{
@@ -90,6 +114,18 @@
 			"cancelled_at":"01-05-2018",
 			"cancellation_message":"factura cancelada",
 			"state":"I",
+			"conceptos": [
+				{
+					"cantidad": 1,
+					"unidad": "Pieza",
+					"descripcion": "agua",
+					"precio_unitario": 100
+				}
+			],
+			"receptor": {
+				"nombre": "Publico en General",
+				"rfc": "XAXX010101XXX"
+			},
 			"invoice_type":"factura"
 		}
 

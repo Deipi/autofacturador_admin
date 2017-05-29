@@ -1,4 +1,3 @@
-import qs from 'qs';
 export const FETCHED_PAGOS = 'FETCHED_PAGOS';
 
 export const fetchPagos = () => (dispatch, getStore) => fetch('http://localhost:3005/pagos', {

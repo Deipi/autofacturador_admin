@@ -1,4 +1,3 @@
-import qs from 'qs';
 export const FETCHED_PAGOS_FILTER = 'FETCHED_PAGOS_FILTER';
 
 export const fetchPagosFilter = (filter) => (dispatch, getStore) => fetch(`http://localhost:3005/pagos?${filter}`, {

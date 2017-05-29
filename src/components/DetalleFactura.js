@@ -34,8 +34,6 @@ const NewLayout = ({ Table,Pagination}) => (
 
 const CustomColumn = ({value}) => <h5>Facturado</h5>;
 const CustomColumn1 = ({value}) => <Badge color={stateMapd[value][1]}>{ stateMapd[value][0] }</Badge>;
-//pago.get('invoice_data').map(p=><li>{p}</li>)
-
 
 class DetalleFactura extends Component {
 	constructor(props) {
@@ -62,16 +60,15 @@ class DetalleFactura extends Component {
 	}
 	render() {
 		const { state: { pago }  } = this;
-		const { pagos,invoice, match: { params: { code } } } =this.props;
-		const detalle=invoice.filter((i)=> i.get('recipient_code')==code)
-		const CustomColumn2 = () =>{pago.get('invoice_data').map(p=><li>{p}</li>)};
+		const { invoice, match: { params: { code } } } =this.props;
+		const detalle=invoice.filter((i)=> i.get('recipient_code')===code)
 
 		if(pago) {
 			return (
 				<div>
 					<div>
 						<Breadcrumb tag="nav">
-							<Link  to="/"><BreadcrumbItem tag="a" href="">receipts</BreadcrumbItem></Link>
+							<Link  to="/"><BreadcrumbItem>receipts</BreadcrumbItem></Link>
 							<BreadcrumbItem active tag="span"> / Detalle</BreadcrumbItem>
 						</Breadcrumb>
 					</div>
@@ -105,19 +102,19 @@ class DetalleFactura extends Component {
 										<th scope="row">Total:</th>
 										<td>{"$"} { pago.get('total') }</td>
 									</tr>
-									<th scope="row">
-										Concepto del pago:
-									</th>
-									<td>
-										<ul>
-											<li>{ pago.get('concepto') ? pago.get('concepto').map(concept=>(
-												<div key={ concept }>
-													<li>{ concept.toJS().descripcion }</li>
-												</div>
-												)):null }
-											</li>
-										 </ul>
-									</td>
+									<tr>
+										<th scope="row">Concepto del pago:</th>
+										<td>
+											<ul>
+												{ pago.get('concepto') ? pago.get('concepto').map(concept=>(
+													<div key={ concept }>
+														<li>{ concept.toJS().descripcion }</li>
+													</div>
+													)):null
+												}
+											</ul>
+										</td>
+									</tr>
 								</tbody>
 							</Table>
 						</Col>
@@ -126,8 +123,7 @@ class DetalleFactura extends Component {
 					<h2 className="text-center">Comprobantes</h2>
 					<Col className="col-md-12" >
 						<Griddle data={detalle.toJS()}
-							plugins={[plugins.LocalPlugin]}
-							plugins={[plugin]}
+							plugins={[plugins.LocalPlugin,plugin]}
 							pago={this.props.pago}
 							styleConfig={{classNames:
 							 { Table: 'table table-striped',} }}

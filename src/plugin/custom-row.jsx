@@ -9,8 +9,6 @@ import {
 
 import toggleRow from './actions';
 
-import { fetchPagos } from '../actions/receipt';
-import { fetchDetalle } from '../actions/invoice';
 
 export default class CustomRow extends Component {
 	static contextTypes = {
@@ -97,7 +95,7 @@ export default class CustomRow extends Component {
 										<Col className="text-center">
 											<div className="form-group">
 												<div className="input-group push-8 offset-8" >
-													<span clasName="input-group-addon"><i className="fa fa-envelope fa-2x"/></span>
+													<span className="input-group-addon"><i className="fa fa-envelope fa-2x"/></span>
 													<input className="input-lg emailinput form-control required" id="email" name="email" placeholder="Proporcione su correo electronico" type="email" />
 												</div>
 											</div>

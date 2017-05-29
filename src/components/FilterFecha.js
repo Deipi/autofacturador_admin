@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import DatePicker from 'react-datepicker';
 
-import { InputGroup, InputGroupAddon, Input, Row, Col} from 'reactstrap';
+import { InputGroup, InputGroupAddon } from 'reactstrap';
 
 import 'react-datepicker/dist/react-datepicker.css';
 
@@ -15,17 +14,17 @@ export class FilterFecha extends Component {
 				<InputGroupAddon><i className="fa fa-calendar" /></InputGroupAddon>
 					<DatePicker
 						selected={ this.props.start }
-						startDate = { this.props.start }
-						endDate = { this.props.end }
+						startDate={ this.props.start }
+						endDate={ this.props.end }
 					    selectsStart
 					    onChange={ this.props.updateSearchPagoStart }
 					    className="form-control custom-date"
 					/>
 
 					<DatePicker
-						selected = { this.props.end }
-						startDate = { this.props.start }
-						endDate = { this.props.end }
+						selected={ this.props.end }
+						startDate={ this.props.start }
+						endDate={ this.props.end }
 					    selectsEnd
 					    onChange={ this.props.updateSearchPagoEnd }
 					    className="form-control custom-date"

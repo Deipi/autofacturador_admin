@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
-
+import { FormGroup,Input } from 'reactstrap';
 
 export class FilterClave extends Component {
 	render() {

@@ -5,9 +5,6 @@ import moment from 'moment';
 
 import fetchPagosFilter from '../actions/filters';
 import fetchPagos from '../actions/receipt';
-import FilterPagos from '../components/FilterPagos'
-import FilterFecha from '../components/FilterFecha'
-import FilterClave from '../components/FilterClave'
 import PagosTable  from '../components/PagosTable';
 
 import FilterContainer from './FilterContainer';

@@ -55,7 +55,7 @@ const AutoFacturador = props => {
 		<div>
 		<div>
 			<Breadcrumb tag="nav">
-				<Link  to="/"><BreadcrumbItem tag="a" >receipts</BreadcrumbItem></Link>
+				<Link  to="/"><BreadcrumbItem>receipts</BreadcrumbItem></Link>
 				<BreadcrumbItem active tag="span">/ Generar Factura</BreadcrumbItem>
 			</Breadcrumb>
 		</div>

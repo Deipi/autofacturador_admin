@@ -8,8 +8,7 @@ import thunk from 'redux-thunk'
 import { Container} from 'reactstrap';;
 import {
   BrowserRouter as Router,
-  Route,
-  Link
+  Route
 } from 'react-router-dom'
 
 import immutable from 'immutable';

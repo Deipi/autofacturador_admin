@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 
 import { FormGroup, Input } from 'reactstrap';
 
 export class FilterPagos extends Component {
    render() {
-		const { onChangee }=this.props;
 	   return (
 
 			<FormGroup>
